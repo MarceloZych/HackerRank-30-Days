@@ -1,52 +1,52 @@
-'use strict';
+// 'use strict';
 
-process.stdin.resume();
-process.stdin.setEncoding('utf-8');
+// process.stdin.resume();
+// process.stdin.setEncoding('utf-8');
 
-let inputString: string = '';
-let inputLines: string[] = [];
-let currentLine: number = 0;
+// let inputString: string = '';
+// let inputLines: string[] = [];
+// let currentLine: number = 0;
 
-process.stdin.on('data', function(inputStdin: string): void {
-    inputString += inputStdin;
-});
+// process.stdin.on('data', function(inputStdin: string): void {
+//     inputString += inputStdin;
+// });
 
-process.stdin.on('end', function(): void {
-    inputLines = inputString.split('\n');
-    inputString = '';
+// process.stdin.on('end', function(): void {
+//     inputLines = inputString.split('\n');
+//     inputString = '';
 
-    main();
-});
+//     main();
+// });
 
-function readLine(): string {
-    return inputLines[currentLine++];
-}
+// function readLine(): string {
+//     return inputLines[currentLine++];
+// }
 
-/*
- * Complete the 'solve' function below.
- *
- * The function accepts following parameters:
- *  1. DOUBLE meal_cost
- *  2. INTEGER tip_percent
- *  3. INTEGER tax_percent
- */
+// /*
+//  * Complete the 'solve' function below.
+//  *
+//  * The function accepts following parameters:
+//  *  1. DOUBLE meal_cost
+//  *  2. INTEGER tip_percent
+//  *  3. INTEGER tax_percent
+//  */
 
-function solve(meal_cost: number, tip_percent: number, tax_percent: number): void {
-    // Write your code here
-    const tip = (meal_cost /100)*tip_percent;
-    const tax = (tax_percent / 100)*meal_cost;
-    const total_cost = meal_cost + tip + tax;
+// function solve(meal_cost: number, tip_percent: number, tax_percent: number): void {
+//     // Write your code here
+//     const tip = (meal_cost /100)*tip_percent;
+//     const tax = (tax_percent / 100)*meal_cost;
+//     const total_cost = meal_cost + tip + tax;
     
-    console.log(Math.round(total_cost))    
+//     console.log(Math.round(total_cost))    
 
-}
+// }
 
-function main() {
-    const meal_cost: number = parseFloat(readLine().trim());
+// function main() {
+//     const meal_cost: number = parseFloat(readLine().trim());
 
-    const tip_percent: number = parseInt(readLine().trim(), 10);
+//     const tip_percent: number = parseInt(readLine().trim(), 10);
 
-    const tax_percent: number = parseInt(readLine().trim(), 10);
+//     const tax_percent: number = parseInt(readLine().trim(), 10);
 
-    solve(meal_cost, tip_percent, tax_percent);
-}
+//     solve(meal_cost, tip_percent, tax_percent);
+// }
